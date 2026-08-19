@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <!-- Gold metallic gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E7"/>
+      <stop offset="18%" stop-color="#FFE566"/>
+      <stop offset="40%" stop-color="#FFD700"/>
+      <stop offset="60%" stop-color="#DAA520"/>
+      <stop offset="80%" stop-color="#B8860B"/>
+      <stop offset="100%" stop-color="#FFE566"/>
+    </linearGradient>
+
+    <!-- Feather gold with depth -->
+    <linearGradient id="featherGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDE7"/>
+      <stop offset="25%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#FFD54F"/>
+      <stop offset="75%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+
+    <linearGradient id="featherHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#FFF8E1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <!-- Tip glow -->
+    <radialGradient id="tipGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#FFF59D" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#FFCA28" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#FF6F00" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Background -->
+    <radialGradient id="bgGrad" cx="50%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#4A2800"/>
+      <stop offset="45%" stop-color="#2A1500"/>
+      <stop offset="100%" stop-color="#0D0600"/>
+    </radialGradient>
+
+    <!-- Ring gradient -->
+    <linearGradient id="ringGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#FFF3B0"/>
+      <stop offset="20%" stop-color="#FFD700"/>
+      <stop offset="45%" stop-color="#C9A227"/>
+      <stop offset="70%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFE566"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="strongGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="textGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Top text path (arched upward) -->
+    <path id="topArc" d="M 78,235 A 178,178 0 0,1 434,235" fill="none"/>
+    <!-- Bottom text path -->
+    <path id="bottomArc" d="M 92,300 A 164,164 0 0,0 420,300" fill="none"/>
+  </defs>
+
+
+  <!-- Medallion base -->
+  <circle cx="256" cy="256" r="248" fill="#0A0500"/>
+
+  <!-- Outer thick gold ring -->
+  <circle cx="256" cy="256" r="244" fill="none" stroke="url(#ringGrad)" stroke-width="13"/>
+  <circle cx="256" cy="256" r="237.5" fill="none" stroke="#FFF8DC" stroke-width="1.8" opacity="0.55"/>
+  <circle cx="256" cy="256" r="251" fill="none" stroke="#8B6914" stroke-width="2.5" opacity="0.65"/>
+
+  <!-- Inner medallion background -->
+  <circle cx="256" cy="256" r="230" fill="url(#bgGrad)"/>
+
+  <!-- Decorative thin rings -->
+  <circle cx="256" cy="256" r="224" fill="none" stroke="url(#goldGrad)" stroke-width="3.2"/>
+  <circle cx="256" cy="256" r="219" fill="none" stroke="#4A2C00" stroke-width="1.2"/>
+
+  <!-- Dotted decorative circle -->
+  <g fill="url(#goldGrad)">
+    <circle cx="256" cy="48" r="3.3"/>
+    <circle cx="294" cy="52.5" r="3.3"/>
+    <circle cx="331" cy="64" r="3.3"/>
+    <circle cx="364" cy="84" r="3.3"/>
+    <circle cx="391" cy="112" r="3.3"/>
+    <circle cx="411" cy="146" r="3.3"/>
+    <circle cx="422.5" cy="184" r="3.3"/>
+    <circle cx="425" cy="224" r="3.3"/>
+    <circle cx="418" cy="264" r="3.3"/>
+    <circle cx="402" cy="301" r="3.3"/>
+    <circle cx="378" cy="333" r="3.3"/>
+    <circle cx="347" cy="358" r="3.3"/>
+    <circle cx="311" cy="375" r="3.3"/>
+    <circle cx="271" cy="384" r="3.3"/>
+    <circle cx="230" cy="384" r="3.3"/>
+    <circle cx="190" cy="375" r="3.3"/>
+    <circle cx="154" cy="358" r="3.3"/>
+    <circle cx="123" cy="333" r="3.3"/>
+    <circle cx="99" cy="301" r="3.3"/>
+    <circle cx="83" cy="264" r="3.3"/>
+    <circle cx="76" cy="224" r="3.3"/>
+    <circle cx="78.5" cy="184" r="3.3"/>
+    <circle cx="90" cy="146" r="3.3"/>
+    <circle cx="110" cy="112" r="3.3"/>
+    <circle cx="137" cy="84" r="3.3"/>
+    <circle cx="170" cy="64" r="3.3"/>
+    <circle cx="207" cy="52.5" r="3.3"/>
+    <circle cx="245" cy="48" r="3.3"/>
+  </g>
+
+  <!-- Inner thin gold line -->
+  <circle cx="256" cy="256" r="198" fill="none" stroke="#C9A227" stroke-width="1.4" opacity="0.75"/>
+
+  <!-- ========== LIGHT TRAILS (behind the quill) ========== -->
+  <g filter="url(#strongGlow)" opacity="0.9">
+    <!-- Long elegant trail left-up -->
+    <path d="M 210,330 
+             C 175,300 145,250 155,200
+             C 165,160 200,145 230,165
+             C 250,180 245,210 230,230"
+          fill="none" stroke="#FFF59D" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M 215,325 
+             C 185,295 160,255 168,215
+             C 175,185 205,170 225,185"
+          fill="none" stroke="#FFECB3" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- Right side trail -->
+    <path d="M 220,335 
+             C 255,310 290,295 320,260
+             C 345,230 340,195 315,180"
+          fill="none" stroke="#FFE082" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M 225,328 
+             C 260,305 290,285 310,255
+             C 325,235 320,210 300,200"
+          fill="none" stroke="#FFF8E1" stroke-width="1.4" stroke-linecap="round"/>
+    <!-- Small decorative curls near tip -->
+    <path d="M 195,310 C 170,320 155,300 165,280 C 175,265 195,270 200,285"
+          fill="none" stroke="#FFD54F" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M 230,340 C 250,355 270,340 265,320"
+          fill="none" stroke="#FFCA28" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tip intense glow -->
+  <circle cx="215" cy="330" r="22" fill="url(#tipGlow)" filter="url(#strongGlow)"/>
+  <circle cx="215" cy="330" r="9" fill="#FFFFFF" opacity="0.85"/>
+
+  <!-- ========== THE GOLDEN QUILL ========== -->
+  <g transform="translate(256,256) rotate(-32) translate(-256,-256)">
+    <!-- Main feather silhouette (elegant classic shape) -->
+    <path d="M 248,125
+             C 255,145 262,180 266,220
+             C 270,255 270,290 265,325
+             C 263,340 258,355 255,365
+             L 252,370
+             L 249,365
+             C 246,355 242,340 240,325
+             C 235,290 234,255 238,220
+             C 242,180 248,145 248,125
+             Z"
+          fill="url(#featherGrad)" stroke="#A67C00" stroke-width="1"/>
+
+    <!-- Left vanes / barbs (soft layered) -->
+    <path d="M 240,145
+             C 210,150 185,165 175,185
+             C 168,200 180,215 200,210
+             C 220,205 235,190 240,175
+             C 242,160 242,150 240,145 Z"
+          fill="url(#featherGrad)" opacity="0.92"/>
+    <path d="M 238,180
+             C 205,190 180,210 172,235
+             C 168,255 185,270 210,260
+             C 230,250 240,230 242,210
+             C 243,195 241,185 238,180 Z"
+          fill="url(#featherGrad)" opacity="0.92"/>
+    <path d="M 240,230
+             C 210,245 185,270 180,300
+             C 178,320 200,330 225,315
+             C 240,305 248,285 250,265
+             C 251,245 245,235 240,230 Z"
+          fill="url(#featherGrad)" opacity="0.9"/>
+
+    <!-- Right vanes -->
+    <path d="M 255,140
+             C 285,145 310,160 318,180
+             C 325,195 315,210 295,205
+             C 275,200 260,185 255,170
+             C 252,155 252,145 255,140 Z"
+          fill="url(#featherGrad)" opacity="0.92"/>
+    <path d="M 258,175
+             C 290,185 315,205 320,230
+             C 323,250 305,265 280,255
+             C 260,245 255,225 256,205
+             C 257,190 258,180 258,175 Z"
+          fill="url(#featherGrad)" opacity="0.92"/>
+    <path d="M 260,225
+             C 290,240 312,265 315,295
+             C 316,315 295,325 270,310
+             C 255,300 250,280 252,260
+             C 253,240 256,230 260,225 Z"
+          fill="url(#featherGrad)" opacity="0.9"/>
+
+    <!-- Central rachis (shaft) with highlight -->
+    <path d="M 248,130
+             C 252,165 256,205 258,245
+             C 260,280 259,310 255,345
+             C 254,355 253,362 252,368"
+          fill="none" stroke="#FFFDE7" stroke-width="3.5" stroke-linecap="round" opacity="0.55"/>
+    <path d="M 248,130
+             C 252,165 256,205 258,245
+             C 260,280 259,310 255,345
+             C 254,355 253,362 252,368"
+          fill="none" stroke="#FFECB3" stroke-width="1.6" stroke-linecap="round" opacity="0.85"/>
+
+    <!-- Nib detail -->
+    <path d="M 250,355 L 252,375 L 255,368 L 256,350 Z"
+          fill="#FFD54F" stroke="#8B6914" stroke-width="0.7"/>
+    <line x1="252" y1="358" x2="253" y2="372" stroke="#5C3A00" stroke-width="0.8"/>
+
+    <!-- Subtle vein lines -->
+    <g stroke="#C9A227" stroke-width="0.55" fill="none" opacity="0.5">
+      <path d="M 242,155 Q 220,165 205,180"/>
+      <path d="M 240,190 Q 215,205 200,225"/>
+      <path d="M 242,240 Q 215,260 200,285"/>
+      <path d="M 255,150 Q 280,160 295,175"/>
+      <path d="M 258,185 Q 285,200 300,220"/>
+      <path d="M 260,235 Q 285,255 300,280"/>
+    </g>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#FFFDE7" filter="url(#softGlow)">
+    <circle cx="170" cy="275" r="2.8"/>
+    <circle cx="155" cy="245" r="1.9"/>
+    <circle cx="185" cy="230" r="1.6"/>
+    <circle cx="145" cy="205" r="2.2"/>
+    <circle cx="175" cy="185" r="1.4"/>
+    <circle cx="210" cy="165" r="1.7"/>
+    <circle cx="275" cy="265" r="2.3"/>
+    <circle cx="300" cy="240" r="1.7"/>
+    <circle cx="315" cy="215" r="2.5"/>
+    <circle cx="290" cy="195" r="1.4"/>
+    <circle cx="335" cy="205" r="1.9"/>
+    <circle cx="245" cy="125" r="1.6"/>
+    <circle cx="275" cy="135" r="1.3"/>
+    <circle cx="225" cy="140" r="1.1"/>
+    <!-- Star shapes -->
+    <path d="M162,225 l3,0.9 -3,0.9 -0.9,3 -0.9,-3 -3,-0.9 3,-0.9 0.9,-3 z" fill="#FFF59D"/>
+    <path d="M308,230 l3.5,1.1 -3.5,1.1 -1.1,3.5 -1.1,-3.5 -3.5,-1.1 3.5,-1.1 1.1,-3.5 z" fill="#FFE082"/>
+    <path d="M198,175 l2.2,0.7 -2.2,0.7 -0.7,2.2 -0.7,-2.2 -2.2,-0.7 2.2,-0.7 0.7,-2.2 z" fill="#FFFFFF"/>
+    <path d="M250,150 l1.8,0.5 -1.8,0.5 -0.5,1.8 -0.5,-1.8 -1.8,-0.5 1.8,-0.5 0.5,-1.8 z" fill="#FFF8E1"/>
+  </g>
+
+  <!-- TOP TEXT -->
+  <text font-family="Georgia, Times, 'Times New Roman', serif" font-size="25.5" font-weight="700"
+        fill="url(#goldGrad)" letter-spacing="2.8" filter="url(#textGlow)">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      ESPAÑOL AVENTURA
+    </textPath>
+  </text>
+  <!-- Dark outline for contrast -->
+  <text font-family="Georgia, Times, 'Times New Roman', serif" font-size="25.5" font-weight="700"
+        fill="none" stroke="#3D1F00" stroke-width="0.9" letter-spacing="2.8" opacity="0.4">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">
+      ESPAÑOL AVENTURA
+    </textPath>
+  </text>
+
+  <!-- BOTTOM TEXT -->
+  <text font-family="Georgia, Times, 'Times New Roman', serif" font-size="16.5" font-weight="700"
+        fill="url(#goldGrad)" letter-spacing="1.3" filter="url(#textGlow)">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      LEE, APRENDE, CREA Y AVANZA
+    </textPath>
+  </text>
+  <text font-family="Georgia, Times, 'Times New Roman', serif" font-size="16.5" font-weight="700"
+        fill="none" stroke="#3D1F00" stroke-width="0.7" letter-spacing="1.3" opacity="0.35">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">
+      LEE, APRENDE, CREA Y AVANZA
+    </textPath>
+  </text>
+</svg>
